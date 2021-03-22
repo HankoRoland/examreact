@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from "react";
 import LoadingMask from './LoadingMask'
 
-const Subscription = () => {
-  const [email, setEmail] = useState("");
+const Subscription = ({subs}) => {
+  const [email, setEmail] = useState("")
   const [hotel, setHotel] = useState("")
 
+  const [show, setShow] = useState(false);
+  const [loader, setLoader] = useState(false)
+  
 
   const sendSubscribe = (e) => {
     e.preventDefault();  
@@ -22,11 +25,8 @@ const Subscription = () => {
 
     })
     
- 
   };
   
-  const [show, setShow] = useState(false);
-  const [loader, setLoader] = useState(false)
   
   
   return (

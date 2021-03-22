@@ -31,8 +31,7 @@ const App = () => {
          {data.map((hotel, i) => <Hotel hotel={hotel} key={i} />)}
        </div>
       ) }
-     
-      {/* {   <Subscription /> } */}
+    
 
       { loader
       && <LoadingMask />
